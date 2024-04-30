@@ -21,3 +21,12 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  color: #75e3ff;
+  transition: all 150ms ease;
+}
