@@ -23,7 +23,7 @@ const canvas = document.querySelector('canvas.webgl');
 const scene = new THREE.Scene();
 
 //Object
-debugObject.color = '#ff0000';
+debugObject.color = '#75e3ff';
 
 const geometry = new THREE.BoxGeometry(1, 1, 1, 2, 2, 2);
 const material = new THREE.MeshBasicMaterial({
@@ -111,12 +111,13 @@ const tick = () => {
   const elapsedTime = clock.getElapsedTime();
 
   //Time
-  // const currenTime = Date.now();
-  // const deltaTime = currenTime - time;
-  // time = currenTime;
+  const currenTime = Date.now();
+  const deltaTime = currenTime - time;
+  time = currenTime;
 
   //Update objects
-  // mesh.rotation.y += 0.001 * deltaTime;
+  mesh.rotation.y += 0.0001 * deltaTime;
+  mesh.rotation.z += 0.00005 * deltaTime;
   // mesh.rotation.y += 0.01;
   // mesh.rotation.y = elapsedTime;
   // mesh.position.y = Math.sin(elapsedTime);
